@@ -3,4 +3,3 @@ myqr
 imageio
 numpy
 Pillow
-pyTelegramBotAPI
