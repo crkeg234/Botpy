@@ -1,5 +1,4 @@
 # -*- coding: utf-8 -*-
-import telebot
 import os
 import re
 from telegram import ParseMode
@@ -128,13 +127,6 @@ def main():
 
     logger.info(f"Starting bot")
 
-    @bot.message_handler(commands=['help'])
-def send_welcome(message):
-    bot.reply_to(message, "¿Me ha llamado maestro?")
-@bot.message_handler(func=lambda message: True)
-def echo_all(message):
-    bot.reply_to(message, message.text)
-bot.polling()
     
     
     # Start the Bot
