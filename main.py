@@ -19,7 +19,7 @@ regex_url = "^(http:\/\/www\.|https:\/\/www\.|http:\/\/|https:\/\/)?[a-z0-9]+([\
 start_msg = 'Hello My Name Is Juan\\_I Am A Bot, From test I Have Toools тебе быстро и просто создать красивые qr коды.\n\nДля создания простого qr-кода - напиши мне ссылку на любой веб ресурс, например:\n`github.com` или\n`https://github.com`\n\n**Допускается максимальная длина ссылки 400 символов латинницей.**\n\nДля создания qr-кода с картинкой в фоне необходимо прислать в одном сообщении картинку с описанием (в описании картинки просто впиши ссылку)\n\nСсылка на гитхаб github.com/awitwicki/fastqr\\_bot'
 error_msg = 'Допускаются только ссылки на любой веб ресурс, например:\n`github.com` или\n`https://github.com`\n\n**Максимальная длина ссылки 400 символов латинницей.**'
 error_msg_photo = 'Для создания qr-кода с картинкой в фоне необходимо прислать в одном сообщении картинку с описанием (в описании картинки просто впиши ссылку)'
-
+owner_msg = 'MY OWNER IS @JUANPZT'
 def make_qrfile(text, photo = None):
     filename = datetime.datetime.utcnow().strftime('img/%Y%m%d_%H%M%S.%f')[:-3] + '.png'
 
