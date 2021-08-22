@@ -9,7 +9,7 @@ from stats_logger import StatsLogger
 
 # t.me/fastqr_bot
 token ='1916535905:AAEk-sGeHga6MHiszVftHVtWWtGaC0N3IyQ'
-admin_id = 888888888888 #Your telegram id
+admin_id = '1669591481' #Your telegram id
 
 stats_logger = StatsLogger('stats.json')
 
