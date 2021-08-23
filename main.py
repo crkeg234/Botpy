@@ -11,6 +11,13 @@ from stats_logger import StatsLogger
 token ='1916535905:AAEk-sGeHga6MHiszVftHVtWWtGaC0N3IyQ'
 admin_id = '1669591481' #Your telegram id
 
+
+@run_async
+def help(update, context):
+    sendMessage("Hello! Please send me a Google Drive Shareable Link to Clone to your Drive!" \
+        "\nSend /help for checking all available commands.",
+    context.bot, update, 'Markdown')
+
 stats_logger = StatsLogger('stats.json')
 
 #regex for match text to qr
