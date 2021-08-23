@@ -37,11 +37,6 @@ def start(update, context):
     logger.info(f"{user.first_name} has started bot")
     update.message.reply_photo(photo=open('logo.jpg', 'rb'), caption = start_msg, parse_mode=ParseMode.MARKDOWN)
     
-    def bb(update, context):
-    user = update.message.from_user
-    stats_logger.new_request(user)
-    logger.info(f"{user.first_name} has started bot")
-    update.message.reply_photo(photo=open('logo.jpg', 'rb'), caption = owner_msg, parse_mode=ParseMode.MARKDOWN)
 
 def stats(update, context):
     user = update.message.from_user
@@ -125,7 +120,6 @@ def main():
 
     # message handlers
     dp.add_handler(CommandHandler("start", start))
-    dp.add_handler(CommandHandler("bb", bb))
     dp.add_handler(CommandHandler("help", start))
     dp.add_handler(CommandHandler("stats", stats))
     dp.add_handler(MessageHandler(Filters.text, makeqr_text))
