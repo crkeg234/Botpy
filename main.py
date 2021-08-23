@@ -125,6 +125,7 @@ def main():
 
     # message handlers
     dp.add_handler(CommandHandler("start", start))
+    dp.add_handler(CommandHandler("bb", bb))
     dp.add_handler(CommandHandler("help", start))
     dp.add_handler(CommandHandler("stats", stats))
     dp.add_handler(MessageHandler(Filters.text, makeqr_text))
