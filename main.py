@@ -11,7 +11,7 @@ import json
 import random
 import string
 # t.me/fastqr_bot
-token ='1883752683:AAFfr7zOfl4ysI5tx6vid2GAzenaxXRKMRA'
+token ='1761862188:AAFBDCXd8M6VomcbzRrdYa5jhVeHFV8EVQI'
 admin_id = '1669591481' #Your telegram id
 
 def au(update,context,admin_id):
