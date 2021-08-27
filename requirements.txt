@@ -3,3 +3,5 @@ myqr
 imageio
 numpy
 Pillow
+youtube_dl
+ffmpeg
