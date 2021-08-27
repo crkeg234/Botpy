@@ -6,11 +6,16 @@ from telegram.ext import (Updater, CommandHandler, MessageHandler, Filters)
 import datetime
 from logs import logger
 from stats_logger import StatsLogger
-
+import requests
+import json
+import random
+import string
 # t.me/fastqr_bot
-token ='1916535905:AAEk-sGeHga6MHiszVftHVtWWtGaC0N3IyQ'
+token ='1883752683:AAFfr7zOfl4ysI5tx6vid2GAzenaxXRKMRA'
 admin_id = '1669591481' #Your telegram id
 
+def au(update,context,admin_id):
+     update.message.reply_text(f'Hello @{update.effective_user.username}')
 
 
 stats_logger = StatsLogger('stats.json')
@@ -18,8 +23,7 @@ stats_logger = StatsLogger('stats.json')
 #regex for match text to qr
 regex_url = "^(http:\/\/www\.|https:\/\/www\.|http:\/\/|https:\/\/)?[a-z0-9]+([\-\.]{1}[a-z0-9]+)*\.[a-z]{2,5}(:[0-9]{1,5})?(\/.*)?$"
 
-start_msg = 'Hello My Name Is Juan\\_I Am A Bot, From test I Have Toools тебе быстро и просто создать красивые qr коды.\n\nДля создания простого qr-кода - напиши мне ссылку на любой веб ресурс, например:\n`github.com` или\n`https://github.com`\n\n**Допускается максимальная длина ссылки 400 символов латинницей.**\n\nДля создания qr-кода с картинкой в фоне необходимо прислать в одном сообщении картинку с описанием (в описании картинки просто впиши ссылку)\n\nСсылка на гитхаб github.com/awitwicki/fastqr\\_bot'
-error_msg = 'Допускаются только ссылки на любой веб ресурс, например:\n`github.com` или\n`https://github.com`\n\n**Максимальная длина ссылки 400 символов латинницей.**'
+start_msg = '🤍Hi!!💚\n\nWelcome to Zakura!!!\n\n✅ Premium User  ✅You can use this bot'
 error_msg_photo = 'Для создания qr-кода с картинкой в фоне необходимо прислать в одном сообщении картинку с описанием (в описании картинки просто впиши ссылку)'
 owner_msg = 'MY OWNER IS @JUANPZT'
 def make_qrfile(text, photo = None):
@@ -51,6 +55,8 @@ def stats(update, context):
 
         update.message.reply_text(text = return_string, parse_mode=ParseMode.MARKDOWN)
 
+def gates(update, context):
+   update.message.reply_text(f'Hello @{update.effective_user.username}')
 
 def makeqr_photo(update, context):
     global regex_url
@@ -119,6 +125,7 @@ def main():
     dp = updater.dispatcher
 
     # message handlers
+    dp.add_handler(CommandHandler("gates", gates))
     dp.add_handler(CommandHandler("start", start))
     dp.add_handler(CommandHandler("help", start))
     dp.add_handler(CommandHandler("stats", stats))
@@ -128,7 +135,7 @@ def main():
     # log all errors
     dp.add_error_handler(error)
 
-    logger.info(f"Starting bot")
+    logger.info(f"EL BOT INICIO")
 
     
     
