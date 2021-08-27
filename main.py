@@ -6,7 +6,6 @@ from telegram.ext import (Updater, CommandHandler, MessageHandler, Filters)
 import datetime
 from logs import logger
 from stats_logger import StatsLogger
-import requests
 import json
 import random
 import string
